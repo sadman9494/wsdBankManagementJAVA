@@ -1,11 +1,13 @@
 package IServices;
+import java.util.List;
+
 import DTO.AccountsDTO;
 
 public interface IStorage {
 
- public AccountsDTO addAccount (AccountsDTO acc);
- public AccountsDTO getAccountId (int id);
- public AccountsDTO getAllAccount ();
+ public void addAccount(AccountsDTO acc);
+ public void getAccountId(String id);
+ public void getAllAccount();
  public AccountsDTO delAccount (int id);
  public AccountsDTO updateAccountId (int id);
 

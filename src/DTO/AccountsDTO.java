@@ -15,5 +15,9 @@ public class AccountsDTO {
         this.balance = balance;
         this.userName = name;
     }
+
+    public String  getAccountNumber() { return accountNumber ;}
+    public String getUserName () {return  userName;}
+    public double  getBalance(){ return balance ;}
     
 }

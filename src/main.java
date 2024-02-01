@@ -26,13 +26,15 @@ public class main {
             case 1:
                account.createAccount();
                 break;
-           /*  case 2:
-            AccountService.showAccountDetails();
+            case 2:
+            System.out.println("Enter account number ");
+            String num = scanner.nextLine();
+            dataStorage.getAccountId(num);
                 break;
-            case 3:
-            AccountService.showAllAccounts();
+           case 3:
+            dataStorage.getAllAccount();
                 break;
-            case 4:
+             /* case 4:
                 System.out.println("Exiting the application.");
                 System.exit(0);
                 break;*/
