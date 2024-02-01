@@ -7,14 +7,13 @@ public class AccountsDTO {
 
     private  String accountNumber;
     private   double balance;
-    private String accountId;
-    private UserDTO  user;
+    private String   userName;
 
-    public AccountsDTO (String  accountNumber,double balance,String accountId){
+    public AccountsDTO (String  name, double balance , String  accountNumber) {
        
         this.accountNumber = accountNumber;
         this.balance = balance;
-        this.accountId=accountId;
+        this.userName = name;
     }
     
 }
