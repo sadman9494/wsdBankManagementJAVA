@@ -17,6 +17,10 @@ public class main {
         System.out.println("2. Show Account Details");
         System.out.println("3. Show All Accounts");
         System.out.println("4. Exit");
+        System.out.println("5. Delete Account");
+        System.out.println("6. Update Your information");
+        System.out.println("7. Deposit Money");
+        System.out.println("8. Withdraw Money");
         System.out.println("Enter your choice:");
 
         int choice = scanner.nextInt();
@@ -34,10 +38,34 @@ public class main {
            case 3:
             dataStorage.getAllAccount();
                 break;
-             /* case 4:
+
+           case 4:
                 System.out.println("Exiting the application.");
                 System.exit(0);
-                break;*/
+                break;
+            case 5:
+            dataStorage.delAccount();
+                break;
+            case 6:
+            System.out.println("Enter account number ");
+            String accnum = scanner.nextLine();
+            dataStorage.updateAccountId(accnum);
+                break;
+            case 7:
+            System.out.println("Enter the Balance you want to deposite ");
+            double balance = scanner.nextDouble();
+            System.out.println("Enter account number ");
+            String number = scanner.nextLine();
+
+                account.depositeAmount(number,balance);
+                break;
+            case 8:
+            System.out.println("Enter the Balance you want to deposite ");
+            double withdrawBalance = scanner.nextDouble();
+            System.out.println("Enter account number ");
+            String accountNum = scanner.nextLine();
+                account.withdrawAmount(accountNum, withdrawBalance);
+                break;
             default:
                 System.out.println("Invalid choice. Please try again.");
         }

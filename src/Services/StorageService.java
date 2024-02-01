@@ -56,15 +56,45 @@ public class StorageService implements IStorage{
         
 
     @Override
-    public AccountsDTO delAccount(int id) {
+    public void delAccount() {
         
-        throw new UnsupportedOperationException("Unimplemented method 'delAccount'");
+        getAllAccount();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter account number you want to delete");
+        String accountnum = scanner.nextLine();
+        for (AccountsDTO acc : accounts)
+        {
+            if(acc.getAccountNumber().equals(accountnum))
+            {
+                accounts.remove(acc);
+            }
+            else {
+                System.out.println("Account not found.");
+            }
+        }
+        System.out.println("Your account has been deleted.");
     }
 
     @Override
-    public AccountsDTO updateAccountId(int id) {
+    public void updateAccountId(String num) {
         
-        throw new UnsupportedOperationException("Unimplemented method 'updateAccountId'");
+        for (AccountsDTO acc : accounts)
+        {
+            if (acc.getAccountNumber().equals(num))
+            {
+                Scanner scanner = new Scanner(System.in);
+          
+                System.out.println("Enter your User Name");
+                String userName = scanner.nextLine();
+      
+                
+              acc.setUserName(userName);
+      
+              System.out.println("Account updated successfully!");
+        } else {
+            System.out.println("Account not found.");
+        }
     }
+}
     
 }
